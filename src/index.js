@@ -81,14 +81,14 @@ var App = React.createClass({
     } else if (this.state.currentView === 'alpha') {
       return (
         <div>
-          <MovieList movies={movieData.sort(this.movieCompareByTitle)} movieClicked={this.movieClicked} />
+          <MovieList movies={this.state.movies.sort(this.movieCompareByTitle)} movieClicked={this.movieClicked} />
           {this.renderMovieDetails()}
         </div>
       )
     }  else {
       return (
         <div>
-          <MovieList movies={movieData.sort(this.movieCompareByReleased)} movieClicked={this.movieClicked} />
+          <MovieList movies={this.state.movies.sort(this.movieCompareByReleased)} movieClicked={this.movieClicked} />
           {this.renderMovieDetails()}
         </div>
       )
